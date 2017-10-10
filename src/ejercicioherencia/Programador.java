@@ -8,6 +8,7 @@ public class Programador extends Empleado{
         this.lenguaje = lenguaje;
     }
     
+    @Override
     public double calcularSalario(){
         if(this.lenguaje.equals("java")){
             return (this.salario + (this.salario*0.1));
@@ -15,5 +16,11 @@ public class Programador extends Empleado{
             return this.salario;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Programador{" + "lenguaje=" + lenguaje + '}' + super.toString();
+    }
+    
     
 }

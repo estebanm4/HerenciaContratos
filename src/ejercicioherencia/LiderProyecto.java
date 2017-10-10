@@ -16,7 +16,23 @@ public class LiderProyecto extends Programador{
         return this.salario + (this.salario*0.1*this.programadores.size());
     }
     
-    
+    public boolean addProgramador (Programador programador){
+        if(this.programadores.add(programador)){
+            return true;
+        } else  {
+            return false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        String aux = "";
+        aux += super.toString() + "a Cargo de ";
+        for (Programador programador : programadores){
+            aux += programador.toString();
+        }
+        return aux;
+    }
     
     
 }

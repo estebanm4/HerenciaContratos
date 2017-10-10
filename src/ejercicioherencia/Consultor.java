@@ -20,6 +20,12 @@ public class Consultor extends Contrato{
     public void setLabor(String labor) {
         this.labor = labor;
     }
+
+    @Override
+    public String toString() {
+        return "Consultor{" + "labor=" + labor + '}' + super.toString();
+    }
+    
     
     
 }
