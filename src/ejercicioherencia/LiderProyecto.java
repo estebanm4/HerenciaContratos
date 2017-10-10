@@ -6,9 +6,9 @@ public class LiderProyecto extends Programador{
     //Asociación
     private ArrayList <Programador> programadores;
 
-    public LiderProyecto(ArrayList<Programador> programadores, String lenguaje, String nombre, double salario, int id) {
+    public LiderProyecto(String lenguaje, String nombre, double salario, int id) {
         super(lenguaje, nombre, salario, id);
-        this.programadores = programadores;
+        this.programadores = new ArrayList<>();
     }
 
     @Override
