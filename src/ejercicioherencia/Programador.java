@@ -1,5 +1,19 @@
 package ejercicioherencia;
 
-public class Programador {
+public class Programador extends Empleado{
+    private String lenguaje;
+
+    public Programador(String lenguaje, String nombre, double salario, int id) {
+        super(nombre, salario, id);
+        this.lenguaje = lenguaje;
+    }
+    
+    public double calcularSalario(){
+        if(this.lenguaje.equals("java")){
+            return (this.salario + (this.salario*0.1));
+        } else {
+            return this.salario;
+        }
+    }
     
 }
