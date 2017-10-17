@@ -6,8 +6,16 @@ public class EjercicioHerencia {
 
     public static void main(String[] args) {
         Consultor pedroElConsultor = new Consultor("POO", 1);
-        Administrador jorgeElAdministrador = new Administrador ("Jorge", 220, 2);
-        Programador fabianElProgramador = new Programador ("java", "Fabian", 500, 3);
+        Administrador jorgeElAdministrador = null;
+        try{jorgeElAdministrador = new Administrador ("Jorge", 220, 2);}
+        catch(ArithmeticException g){
+            System.out.println(jorgeElAdministrador.getNombre() + g.getMessage());
+        }
+        Programador fabianElProgramador = null;
+        try{fabianElProgramador = new Programador ("java", "Fabian", 500, 3);}
+        catch(ArithmeticException m) {
+            System.out.println(fabianElProgramador.getNombre() + m.getMessage());
+        }
         Programador bobElProgramador = new Programador ("C", "Bob", 600, 4);
         LiderProyecto carlosElLider = new LiderProyecto ("Java", "Carlos", 600, 4);
         carlosElLider.addProgramador(bobElProgramador);
