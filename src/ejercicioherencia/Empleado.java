@@ -6,6 +6,12 @@ public abstract class Empleado extends Contrato {
 
     public Empleado(String nombre, double salario, int id) {
         super(id);
+        if (nombre.length() < 5){
+            throw new IllegalArgumentException("Nombre debe tener más de 10 caracteres");
+        }
+        if (this.salario < 700) {
+            throw new ArithmeticException("Salario menor al MLV");
+        }
         this.nombre = nombre;
         this.salario = salario;
     }
