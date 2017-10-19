@@ -16,8 +16,16 @@ public class EjercicioHerencia {
         catch(ArithmeticException m) {
             System.out.println(fabianElProgramador.getNombre() + m.getMessage());
         }
-        Programador bobElProgramador = new Programador ("C", "Bob", 600, 4);
-        LiderProyecto carlosElLider = new LiderProyecto ("Java", "Carlos", 600, 4);
+        Programador bobElProgramador = null;
+        try{bobElProgramador = new Programador ("C", "Bob", 600, 4);}
+        catch(ArithmeticException f){
+            System.out.println(bobElProgramador.getNombre() + f.getMessage());
+        }
+        LiderProyecto carlosElLider = null;
+        try{carlosElLider = new LiderProyecto ("Java", "Carlos", 600, 4);}  
+        catch(ArithmeticException k ){
+            System.out.println(carlosElLider.getNombre() + k.getMessage());
+        }        
         carlosElLider.addProgramador(bobElProgramador);
         carlosElLider.addProgramador(fabianElProgramador);
         Compañia compañia = new Compañia ("Unal");
